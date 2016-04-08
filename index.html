@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Segunda Aplicacion</title>
+
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/temasapp2.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('imagenes/semanas.jpg')">
+<div data-role="page" id="Principal" data-them="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1> Semana Santa en México  </h1>
+  </div>
+  <div data-role="main" class="ui-content">
+  <div>
+  <center><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image20','','imagenes/semanas.jpg',1)"><img src="imagenes/SemanaSanta.jpg" width="450" height="273" id="Image20"></a>
+  </center></div>
+<!-- div data-role="collapsible" data-content-theme="false">
+  <h1>Foto del Perfil</h1>
+  <div>
+  <p>Esta es mi imagen de perfil: </p>
+  <br>
+  </div>
+  <div>
+  <img src="imagenes/yo.jpg" width="50%" height="50%"> </div>
+  </div-->
+  </div>
+  
+  <div>
+  <ul data-role="listview" data-theme="" class="ui-listview ui-group-theme-b">
+  <li class="ui-first-child ui-last-child">
+  <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  <h2>¿ Que significa la Semana Santa ?</h2>
+  <p>Muestra el significado</p>
+  </a>
+  </li>
+  <li class="ui-first-child ui-last-child">
+ <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  <h2>¿ Que religiones celebran ?</h2>
+  <p>Se muestran las religiones</p>
+  </a>
+  </li>
+  <li class="ui-first-child ui-last-child">
+  <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  <h2>La Semana Santa en Atlixco</h2>
+  <p>Muestra la celebración </p>
+  </a>
+  </li>
+  <li class="ui-first-child ui-last-child">
+  <a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  <h2>Celebración en el estado de Puebla</h2>
+  <p>Muestra la celebración </p>
+  </a>
+  </li>
+  <li class="ui-first-child ui-last-child">
+   <a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  <h2>Celebración en Iztapalapa</h2>
+  <p>Muestra la celebración</p>
+  </a>
+  </li>
+  <li class="ui-first-child ui-last-child">
+   <a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  <h2>Celebración en San Luis Potosi</h2>
+  <p>Muestra la celebración</p>
+  </a>
+  </li>
+  <li class="ui-first-child ui-last-child">
+   <a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  <h2>Celebración en Guerrero</h2>
+  <p>Muestra la celebración</p>
+  </a>
+  </li>
+  <li class="ui-first-child ui-last-child">
+   <a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+  <h2>Celebración en Oaxaca</h2>
+  <p>Muestra la celebración</p>
+  </a>
+  </li>
+  </ul>
+  </div>
+  <div data-role="footer" align="center" data-theme="a">
+  <div>
+  <img src="imagenes/persona_rosa.png" width="46" height="46">
+  </div>
+  <div>
+  <h4>Aplicacion Dos</h4>
+  <h4>Lizbeth Actual Hernández</h4>
+  </div>
+  </div>
+  </div>
+  
+  <div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+  <h1>¿Que significa la Semana Santa?</h1>
+  </div>
+  <div data-role="content" align="center">
+  <div>
+  <p> <h2> Semana Santa: </h2>
+  <br>
+  <img src="imagenes/semana_s.png" width="400" height="200">
+  <br>
+  Es un período de 7 días que comienza con el Domingo de Ramos y culmina con el Domingo de Resurrección. Con la Semana Santa, el cristiano conmemora el Triduo Pascual, es decir, los momentos de la Pasión, la Muerte y la Resurrección de Jesucristo.
+<br>
+La Semana Santa está precedida por la Cuaresma que se refiere al tiempo de preparación donde se recuerda los 40 días de Jesucristo en el desierto. Las celebraciones centrales de la Semana Santa son: Jueves Santo, Viernes Santo, Sábado Santo y Domingo de Resurrección.
+  <br>
+  <img src="imagenes/semanas.jpg" width="400" height="200"></p>
+  </div>
+  </div>
+  <div data-role="footer" data-theme="a">
+  <h4>Lizbeth Actual Hernández</h4>
+  </div>
+  </div>
+  </div>
+  
+  <div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+  <h1>¿Que religiones celebran?</h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+ <h2>Catolicos:</h2>
+ <br>
+ <img src="imagenes/catolicos.png" width="300" height="150" aling="right">
+ <p>Tiene lugar después de la Cuaresma, el ciclo de cuarenta días que abarca desde el Miércoles de Ceniza hasta el Jueves Santo. Concretamente, la celebración comienza el domingo de Ramos y finaliza el Sábado Santo, aunque en algunos lugares se adelanta al viernes anterior (el de Dolores) y se prolonga hasta el Domingo de Resurrección.</p>
+ <br>
+ <h2>Cristianos Evangelicos:</h2>
+ <br>
+ <img src="imagenes/cristianos.jpeg" width="300" height="200">
+ <br>
+ <p>Para la iglesia cristiana, la Semana Santa es el tiempo para recordar la muerte de Cristo. Para conmemorarla, se congregan en una jornada de oración y adoración, la cual inicia el Jueves Santo a las 9:00 de la noche y se extiende por 24 horas.
+
+En esta reunión se dan cita grupos artísticos y musicales, ya que los cristianos creen que “Dios habita en medio de la alabanza”. Además, para ellos es fundamental la vigilia, es decir, pasar una noche en vela y adorando a Dios.</p>
+<br>
+ <h2>Testigos de Jehová:</h2>
+ <br>
+ <img src="imagenes/tes_jeh.jpg" width="200" height="100">
+ <br>
+ <p> la comunidad se reúne en el Salón del Reino para recordar esta acción, reflexionar sobre ella y el significado de la muerte y resurrección de Jesús, como rey mas no como Dios todopoderoso.</p>
+ <br>
+ <h2>Judios:</h2>
+ <br>
+ <img src="imagenes/judios.jpg" width="200" height="100">
+ <br>
+ <p>celebran el matza, una cena que consiste en hierbas con sabor amargo y pan sin levadura (ácimo) en forma de galleta. El sabor amargo recuerda la esclavitud que vivió el pueblo de Israel ante los egipcios; y el pan sin levadura, según las escrituras bíblicas, simboliza la humildad de esta comunidad.</p>
+ <br>
+ <h2>Mormones:</h2>
+ <br>
+ <img src="imagenes/mormones.jpg" width="200" height="100">
+ <br>
+ <p>La Semana Santa de los mormónes inicia desde el Lunes Santo, y como suelen hacer muy habitualmente durante muchas semanas del año, se reúnen en lo que llaman la “noche del hogar” para recordar pasajes de la Biblia protestante y, sobre todo, de sus libros sagrados. Son momentos de estar en familia, de compartir, y recordar cómo Jesús, que era un hombre según ellos, sólo un hombre, se hizo Dios también</p>
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <h4> Lizbeth Actual Hernández</h4>
+ </div>
+ </div>
+ </div>
+
+ <div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+ <h1> La Semana Santa en Atlixco</h1>
+ </div>
+ <div data-role="content" align="center">
+ <div data-role="collapsible" data-content-theme="false">
+  <h1>Tapete Floral en Atlixco </h1>
+  <div>
+  <p> Este tapete se encuentra en frente del palacio municipal de la Cd. de Atlixco </p>
+  <br>
+  </div>
+  <div>
+  <img src="imagenes/tapetef.jpg" width="50%" height="50%"> </div>
+  </div>
+  <div data-role="collapsible" data-content-theme="false">
+  <h1> Engrillados </h1>
+  <div>
+  <p> Quienes realizan descalzos el recorrido, cubiertos sólo con calzón negro y una tela negra en el rostro.
+
+Cabe resaltar que los engrillados cargan una charola de metal, la cual sirve para recabar las limosnas de la gente que los ve pasar y que respetan y admiran su fe en esta Semana Santa. </p>
+  <br>
+  </div>
+  <div>
+  <img src="imagenes/engrillados.jpg" width="50%" height="50%"> </div>
+  </div>
+   <div data-role="collapsible" data-content-theme="false">
+  <h1> Recorrido de la celebración </h1>
+  <div>
+  <p> El recorrido dura aproximadamente 1 a 2 horas. </p>
+  <br>
+  </div>
+  <div>
+  <img src="imagenes/tapete.jpg" width="50%" height="50%"> 
+  <br>
+  <img src="imagenes/cruz3.jpg" width="50%" height="50%"></div>
+  </div>
+   <div data-role="collapsible" data-content-theme="false">
+  <h1> Tapetes del recorrido  </h1>
+  <div>
+  <p> Normalmente las alfombras son elaboradas por la familia o por grupos de amigos al frente de sus casas. 
+
+Elaborar una alfombra significa para los creyentes agradecer un favor, un milagro y se convierte en un compromiso personal de la familia o calle que la elabora que se cumple cada año.
+ </p>
+  <br>
+  </div>
+  <div>
+  <img src="imagenes/tapete3.jpg" width="50%" height="50%"> </div>
+  </div>
+ <div data-role="footer" data-theme="a">
+ <h4> Lizbeth Actual Hernández</h4>
+ </div>
+ </div>
+ </div>
+
+ <div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+ <h1>Celebración en el estado de Puebla </h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+ <p>Durante la Semana Mayor, en Puebla se llevan a cabo festividades tradicionales que motivan un gran turismo religioso.
+
+Además de los poblanos, habitantes de la Ciudad de México, Guerrero, Oaxaca y Tabasco, acuden a la Catedral de Puebla, el templo del Señor de las Maravillas y la Capilla del Rosario, convirtiéndose en los inmuebles más visitados.</p>
+ <img src="imagenes/puebla.jpg">
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <h4>Lizbeth Actual Hernández</h4>
+ </div>
+ </div>
+ </div>
+ 
+ <div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+ <h1>Celebración en Iztapalapa </h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+ <p>El comité organizador de Semana Santa en Ixtapalapa consiente de la importancia que tienen las familias de los 8 barrios quienes año con año brindan el apoyo incondicional a la tradicional representación de semana santa, ha tenido a bien brindar un merecido reconocimiento y homenaje a la trayectoria  como un agradecimiento en nombre de todos los habitantes de los barrios de Iztapalapa.</p>
+ <img src="imagenes/iztapalapa.jpg">
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <h4>Lizbeth Actual Hernández</h4>
+ </div>
+ </div>
+ </div>
+  
+  <div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+ <h1>Celebración en San Luis Potosi </h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+ <p> En todo San Luis Potosí se organizan un buen número de eventos culturales y religiosos para conmemorar la Semana Santa, desde turismo religioso y cultural, como el espectáculo de la Fiesta de la Luz, museos e iglesias, hasta turismo de aventura. Sin embargo, el evento más importante y de mayor tradición entre los lugareños tiene lugar el Viernes Santo, cuando se realiza la Procesión del Silencio, una de las más arraigadas debido a su solemnidad y misticismo.</p>
+ <img src="imagenes/san_luis.jpg">
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <h4>Lizbeth Actual Hernández</h4>
+ </div>
+ </div>
+ </div>
+  
+  <div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+ <h1>Celebración en Guerrero </h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+ <p>En el tradicional Martes Santo en Taxco de Alarcón, Guerrero, se llevó a cabo la procesión de las ánimas iniciando en la capilla de San Nicolás como parte de los festejos de Semana Santa. En este recorrido nocturno participan penitentes que visten de negro, se cubren la cabeza con un capuchón; los hombres van descalzos y amarrados con una cadena que al caminar por las empedradas calles del pueblo mágico produce un sonido impactante.
+</p>
+ <img src="imagenes/guerrero.jpg">
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <h4>Lizbeth Actual Hernández</h4>
+ </div>
+ </div>
+ </div>
+  
+  <div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+ <h1>Celebración en Oaxaca </h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+ <p>Dentro de la gama de festejos religiosos para los Oaxaqueños la cuaresma y la Semana Santa reviste gran significado.
+
+El Primer Viernes de Cuaresma la Festividad del Señor de Las Misericordias en el Templo de San Juan de Dios, el Segundo Viernes de Cuaresma la Festividad del Señor de Las Maravillas en el Templo de La Defensa , el Cuarto Viernes de Cuaresma la Festividad de la Samaritana en la Ciudad de Oaxaca, el Quinto Viernes de Cuaresma la festividad del Señor de las Peñas en el Templo del Carmen Alto y la Festividad del Señor San Lázaro en la Villa de San Antonino Castillo Velasco.</p>
+ <img src="imagenes/oaxaca.jpg">
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <h4> Lizbeth Actual Hernández</h4>
+ </div>
+ </div>
+ </div>
+  </div>
+  
+ </body>
+ </html>
